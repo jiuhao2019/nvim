@@ -9,10 +9,12 @@ wk.add({
     -- Most attributes can be inherited or overridden on any level
     -- There's no limit to the depth of nesting
     mode = { "n", "v" }, -- NORMAL and VISUAL mode
-    { "<leader>se", "<cmd>HopChar1MW<cr>", desc = "easymotion" },
-    { "<leader>bt", "<cmd>diffthis<cr>", desc = "diffthis" },
-    { "<leader>bT", "<cmd>diffoff<cr>", desc = "diffoff" },
-    { "<leader>ct", "<cmd>TagbarToggle<CR>", desc = "tagbar toggle" },
-    { "<leader>cu", "<esc>:UndotreeToggle<CR>", desc = "undotree toggle" },
+    { "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+    { "<leader>bt", "<cmd>diffthis<cr>", desc = "Diff This" },
+    { "<leader>bT", "<cmd>diffoff<cr>", desc = "Diff Off" },
+    { "<leader>bk", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight Keyword" },
+    { "<leader>bK", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt Keyword" },
+    { "<leader>ct", "<cmd>TagbarToggle<cr>", desc = "Tagbar Toggle" },
+    { "<leader>cu", "<cmd>UndotreeToggle<cr>", desc = "Undotree Toggle" },
   },
 })
