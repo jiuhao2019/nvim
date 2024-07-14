@@ -3,4 +3,29 @@
 -- Add any additional options here
 vim.opt.number = false
 vim.opt.relativenumber = false
-vim.cmd([[set paste]])
+vim.cmd([[
+    set paste
+	set confirm
+
+	set tabstop     =4
+	set softtabstop =4
+	set shiftwidth  =4
+	set expandtab
+
+    set autoindent
+
+    set noswapfile
+    set nobackup
+
+	set history=10000
+
+    set scrolloff=18
+    set completeopt=menu,menuone,noselect
+
+	"搜索字符跳转时不循环，要么到底，要么到顶
+	set nowrapscan
+	"不自动换行
+	set nowrap
+
+	set noautochdir
+]])
