@@ -14,7 +14,7 @@ vim.opt.relativenumber = false
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
+vim.opt.showmode = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -56,7 +56,7 @@ vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
-
+vim.opt.cmdheight = 1
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 19
 vim.cmd([[
@@ -77,5 +77,34 @@ vim.cmd([[
     set nowrap
     set noautochdir
     set shortmess=aIt
+    "不要自动生成各种备份文件
+    set noswapfile
+    set nobackup
+    "一直显示底部状态栏,tab栏
+    set laststatus=2
+    set showtabline=0
+    set statusline=%F%m%r%h%w%=\ [%l\/%L:%v]
+    set tags=tags;
+    function! UpdateCtags()
+       let curdir=getcwd()
+       while !filereadable("./tags")
+          cd ..
+          if getcwd() == "/"
+              break
+          endif
+       endwhile
+       if filewritable("./tags")
+         !rm tags
+         !ctags -R  --langmap=c:+.h --languages=c --links=yes --c-kinds=+p --fields=+iaS --extras=+qF
+       endif
+       execute ":cd " . curdir
+    endfunction
 ]])
+-- -------------------------------------------
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = "*",
+	callback = function()
+		vim.diagnostic.enable(false)
+	end,
+})
 -- vim: ts=2 sts=2 sw=2 et

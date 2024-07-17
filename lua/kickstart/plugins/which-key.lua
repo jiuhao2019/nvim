@@ -22,13 +22,16 @@ return {
 
 			-- Document existing key chains
 			require("which-key").add({
-				{ "<leader>c", group = "Code" },
-				{ "<leader>d", group = "Document" },
-				{ "<leader>r", group = "Rename" },
+				{ "<leader>f", group = "File" },
 				{ "<leader>s", group = "Search" },
-				{ "<leader>w", group = "Workspace" },
-				{ "<leader>t", group = "Toggle" },
-				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+				{ "<leader>d", group = "Diff" },
+				{ "<leader>dt", "<cmd>diffthis<cr>", desc = "Diff This" },
+				{ "<leader>dT", "<cmd>diffoff<cr>", desc = "Diff Off" },
+				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight Keyword" },
+				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt Keyword" },
+				{ "<leader>t", "<cmd>TagbarToggle<cr>", desc = "Tagbar Toggle" },
+				{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Undotree Toggle" },
 			})
 		end,
 	},

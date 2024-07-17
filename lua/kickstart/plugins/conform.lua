@@ -4,12 +4,12 @@ return {
 		lazy = false,
 		keys = {
 			{
-				"<leader>f",
+				"<leader><leader>",
 				function()
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
 				mode = "",
-				desc = "[F]ormat buffer",
+				desc = "Format buffer",
 			},
 		},
 		opts = {
@@ -25,7 +25,7 @@ return {
 				}
 			end,
 			formatters_by_ft = {
-				lua = { "stylua" },
+				["lua"] = { "stylua" },
 				["typescript"] = { "prettier" },
 				["markdown"] = { "prettier" },
 				["c"] = { "astyle" },
