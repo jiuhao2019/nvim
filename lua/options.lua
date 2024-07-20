@@ -4,7 +4,6 @@ vim.cmd([[
     filetype plugin on
     syntax on
     set autoread
-    set background =dark
     set paste
     set confirm
     set tabstop     =4
@@ -48,7 +47,7 @@ vim.cmd([[
  ]])
 
 --  For more options, you can see `:help option-list`
-
+vim.opt.termguicolors = true
 vim.opt.number = false
 vim.opt.mouse = "a"
 vim.opt.showmode = true
@@ -73,6 +72,7 @@ vim.opt.timeoutlen = 30
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.background = "dark"
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -88,7 +88,6 @@ vim.opt.cursorline = true
 vim.opt.cmdheight = 1
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 19
-
 -- -------------------------------------------
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	pattern = "*",
