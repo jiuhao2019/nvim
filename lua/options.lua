@@ -1,30 +1,12 @@
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make line numbers default
 vim.opt.number = false
-vim.opt.relativenumber = false
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true
 
--- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
-
--- Don't show the mode, since it's already in the status line
 vim.opt.showmode = true
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
 vim.opt.clipboard = "unnamedplus"
-
--- Enable break indent
 vim.opt.breakindent = true
-
--- Save undo history
 vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -60,6 +42,7 @@ vim.opt.cmdheight = 1
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 19
 vim.cmd([[
+    set background =dark
     set paste
     set confirm
     set tabstop     =4
@@ -69,20 +52,20 @@ vim.cmd([[
     set autoindent
     set noswapfile
     set nobackup
-    set history=10000
+    set history =10000
     set completeopt=menu,menuone,noselect
     "搜索字符跳转时不循环，要么到底，要么到顶
     set nowrapscan
     "不自动换行
     set nowrap
     set noautochdir
-    set shortmess=aIt
+    set shortmess =aIt
     "不要自动生成各种备份文件
     set noswapfile
     set nobackup
     "一直显示底部状态栏,tab栏
-    set laststatus=2
-    set showtabline=0
+    set laststatus =2
+    set showtabline =0
     set statusline=%F%m%r%h%w%=\ [%l\/%L:%v]
     set tags=tags;
     function! UpdateCtags()

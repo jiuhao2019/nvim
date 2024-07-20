@@ -23,11 +23,15 @@ return {
 			-- Document existing key chains
 			require("which-key").add({
 				{ "<leader>f", group = "File" },
+				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
+				{ "<leader>fx", "<esc>:wqa<cr>", desc = "Quit" },
+
 				{ "<leader>s", group = "Search" },
 				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+
 				{ "<leader>d", group = "Diff" },
-				{ "<leader>dt", "<cmd>diffthis<cr>", desc = "Diff This" },
-				{ "<leader>dT", "<cmd>diffoff<cr>", desc = "Diff Off" },
+				{ "<leader>dt", "<cmd>diffthis<cr>", desc = "Diff this" },
+				{ "<leader>dT", "<cmd>diffoff<cr>", desc = "Diff off" },
 				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight Keyword" },
 				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt Keyword" },
 				{ "<leader>t", "<cmd>TagbarToggle<cr>", desc = "Tagbar Toggle" },
