@@ -87,7 +87,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.cmdheight = 1
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 19
+vim.opt.scrolloff = 1
 -- -------------------------------------------
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	pattern = "*",
