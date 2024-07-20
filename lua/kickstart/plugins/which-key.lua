@@ -25,6 +25,21 @@ return {
 				{ "<leader>f", group = "File" },
 				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
 				{ "<leader>fx", "<esc>:wqa<cr>", desc = "Quit" },
+				{
+					"<leader>f1",
+					"<esc>:e ~/.config/nvim/lua/kickstart/plugins/which-key.lua<cr>",
+					desc = "Nvim config",
+				},
+				{
+					"<leader>f2",
+					"<esc>:e ~/.config/wezterm/font.lua<cr>",
+					desc = "Wezterm config",
+				},
+				{
+					"<leader>f3",
+					"<esc>:e ~/.config/i3/config<cr>",
+					desc = "i3wm config",
+				},
 
 				{ "<leader>s", group = "Search" },
 				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
