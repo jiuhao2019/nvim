@@ -1,8 +1,55 @@
+vim.cmd([[
+    filetype on
+    filetype indent on
+    filetype plugin on
+    syntax on
+    set autoread
+    set background =dark
+    set paste
+    set confirm
+    set tabstop     =4
+    set softtabstop =4
+    set shiftwidth  =4
+    set expandtab
+    set autoindent
+    set noswapfile
+    set nobackup
+    set history =10000
+    set completeopt=menu,menuone,noselect
+    "搜索字符跳转时不循环，要么到底，要么到顶
+    set nowrapscan
+    "不自动换行
+    set nowrap
+    set noautochdir
+    set shortmess =aIt
+    "不要自动生成各种备份文件
+    set noswapfile
+    set nobackup
+    "一直显示底部状态栏,tab栏
+    set laststatus =2
+    set showtabline =0
+    set statusline=%F%m%r%h%w%=\ [%l\/%L:%v]
+    set tags=tags;
+
+    function! UpdateCtags()
+      let curdir=getcwd()
+      while !filereadable("./tags")
+        cd ..
+        if getcwd() == "/"
+          break
+        endif
+      endwhile
+      if filewritable("./tags")
+        !rm tags
+        !ctags -R  --langmap=c:+.h --languages=c --links=yes --c-kinds=+p --fields=+iaS --extras=+qF
+      endif
+      execute ":cd " . curdir
+    endfunction
+ ]])
+
 --  For more options, you can see `:help option-list`
 
 vim.opt.number = false
--- vim.opt.relativenumber = true
-
 vim.opt.mouse = "a"
 vim.opt.showmode = true
 vim.opt.clipboard = "unnamedplus"
@@ -41,48 +88,7 @@ vim.opt.cursorline = true
 vim.opt.cmdheight = 1
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 19
-vim.cmd([[
-    set background =dark
-    set paste
-    set confirm
-    set tabstop     =4
-    set softtabstop =4
-    set shiftwidth  =4
-    set expandtab
-    set autoindent
-    set noswapfile
-    set nobackup
-    set history =10000
-    set completeopt=menu,menuone,noselect
-    "搜索字符跳转时不循环，要么到底，要么到顶
-    set nowrapscan
-    "不自动换行
-    set nowrap
-    set noautochdir
-    set shortmess =aIt
-    "不要自动生成各种备份文件
-    set noswapfile
-    set nobackup
-    "一直显示底部状态栏,tab栏
-    set laststatus =2
-    set showtabline =0
-    set statusline=%F%m%r%h%w%=\ [%l\/%L:%v]
-    set tags=tags;
-    function! UpdateCtags()
-       let curdir=getcwd()
-       while !filereadable("./tags")
-          cd ..
-          if getcwd() == "/"
-              break
-          endif
-       endwhile
-       if filewritable("./tags")
-         !rm tags
-         !ctags -R  --langmap=c:+.h --languages=c --links=yes --c-kinds=+p --fields=+iaS --extras=+qF
-       endif
-       execute ":cd " . curdir
-    endfunction
-]])
+
 -- -------------------------------------------
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	pattern = "*",
