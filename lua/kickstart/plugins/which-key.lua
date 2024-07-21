@@ -23,7 +23,8 @@ return {
 			-- Document existing key chains
 			require("which-key").add({
 				{ "<leader>f", group = "File" },
-				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
+				{ "<leader>fr", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
+				{ "<leader>ff", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
 				{ "<leader>fx", "<esc>:wqa<cr>", desc = "Quit" },
 				{
 					"<leader>f1",
@@ -51,7 +52,10 @@ return {
 				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt" },
 				{ "<leader>t", "<cmd>TagbarToggle<cr>", desc = "Tagbar" },
 				{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
-				{ "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy" },
+
+				{ "<leader>l", group = "Lazy/List" },
+				{ "<leader>lp", "<cmd>Lazy<cr>", desc = "Lazy plugin manager" },
+				{ "<leader>lb", "<cmd>lua require('fzf-lua').buffers()<cr>", desc = "Buffer" },
 			})
 		end,
 	},
