@@ -42,6 +42,11 @@ return {
 					"<esc>:e ~/.config/i3/config<cr>",
 					desc = "i3wm config",
 				},
+				{
+					"<leader>f4",
+					"<esc>:e ~/.emacs.d/init.el<cr>",
+					desc = "Emacs config",
+				},
 
 				{ "<leader>s", group = "Search" },
 				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
