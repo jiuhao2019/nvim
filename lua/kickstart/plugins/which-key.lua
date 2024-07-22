@@ -26,6 +26,7 @@ return {
 				{ "<leader>fr", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
 				{ "<leader>ff", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
 				{ "<leader>fx", "<esc>:wqa<cr>", desc = "Quit" },
+				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
 				{
 					"<leader>f1",
 					"<esc>:e ~/.config/nvim/lua/kickstart/plugins/which-key.lua<cr>",
