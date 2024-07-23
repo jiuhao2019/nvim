@@ -14,18 +14,16 @@
 --  config = function() ... end
 
 return {
-	{ -- Useful plugin to show you pending keybinds.
+	{
 		"folke/which-key.nvim",
-		event = "VimEnter", -- Sets the loading event to 'VimEnter'
-		config = function() -- This is the function that runs, AFTER loading
+		event = "VimEnter",
+		config = function()
 			require("which-key").setup()
 
-			-- Document existing key chains
 			require("which-key").add({
 				{ "<leader>f", group = "File" },
 				{ "<leader>fr", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
 				{ "<leader>ff", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
-				{ "<leader>fx", "<esc>:wqa<cr>", desc = "Quit" },
 				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
 				{
 					"<leader>f1",
@@ -47,6 +45,9 @@ return {
 					"<esc>:e ~/.emacs.d/init.el<cr>",
 					desc = "Emacs config",
 				},
+
+				{ "<leader>q", group = "Quit" },
+				{ "<leader>qa", "<esc>:qa<cr>", desc = "Quit all" },
 
 				{ "<leader>s", group = "Search" },
 				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
