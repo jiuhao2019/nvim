@@ -46,8 +46,7 @@ return {
 					desc = "Emacs config",
 				},
 
-				{ "<leader>q", group = "Quit" },
-				{ "<leader>qa", "<esc>:qa<cr>", desc = "Quit all" },
+				{ "<leader>q", "<esc>:qa<cr>", desc = "Quit all" },
 
 				{ "<leader>s", group = "Search" },
 				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },

@@ -1,4 +1,7 @@
 vim.cmd([[
+    "编码模式，避免乱码
+    set fileencodings =utf-8,cp936,big5,latin1
+    set encoding      =utf-8
     filetype on
     filetype indent on
     filetype plugin on
