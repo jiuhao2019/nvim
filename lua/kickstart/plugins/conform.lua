@@ -2,16 +2,6 @@ return {
 	{ -- Autoformat
 		"stevearc/conform.nvim",
 		lazy = false,
-		keys = {
-			{
-				"<leader>fm",
-				function()
-					require("conform").format({ async = true, lsp_fallback = true })
-				end,
-				mode = "",
-				desc = "Format",
-			},
-		},
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)

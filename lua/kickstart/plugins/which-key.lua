@@ -21,47 +21,52 @@ return {
 			require("which-key").setup()
 
 			require("which-key").add({
-				{ "<leader>f", group = "File" },
-				{ "<leader>fr", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
-				{ "<leader>ff", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
-				{ "<leader>fs", "<esc>:w<cr>", desc = "Save" },
+				{ "<leader>o", group = "Open" },
 				{
-					"<leader>f1",
+					"<leader>o1",
 					"<esc>:e ~/.config/nvim/lua/kickstart/plugins/which-key.lua<cr>",
 					desc = "Nvim config",
 				},
 				{
-					"<leader>f2",
+					"<leader>o2",
 					"<esc>:e ~/.config/wezterm/font.lua<cr>",
 					desc = "Wezterm config",
 				},
 				{
-					"<leader>f3",
+					"<leader>o3",
 					"<esc>:e ~/.config/i3/config<cr>",
 					desc = "i3wm config",
 				},
 				{
-					"<leader>f4",
+					"<leader>o4",
 					"<esc>:e ~/.emacs.d/init.el<cr>",
 					desc = "Emacs config",
 				},
 
+				{
+					"<leader>F",
+					"<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>",
+					desc = "Format",
+				},
+				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
+				{ "<leader>f", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
+				{ "<leader>w", "<esc>:w<cr>", desc = "Write" },
+
 				{ "<leader>q", "<esc>:qa<cr>", desc = "Quit all" },
+				{ "<leader>e", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+				{ "<leader>s", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", desc = "Search" },
 
-				{ "<leader>s", group = "Search" },
-				{ "<leader>se", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+				{ "<leader>d", "<cmd>diffthis<cr>", desc = "Diff this" },
+				{ "<leader>D", "<cmd>diffoff<cr>", desc = "Diff off" },
 
-				{ "<leader>d", group = "Diff" },
-				{ "<leader>dt", "<cmd>diffthis<cr>", desc = "Diff this" },
-				{ "<leader>dT", "<cmd>diffoff<cr>", desc = "Diff off" },
 				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight" },
 				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt" },
+
 				{ "<leader>t", "<cmd>TagbarToggle<cr>", desc = "Tagbar" },
 				{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
 
-				{ "<leader>l", group = "Lazy/List" },
-				{ "<leader>lp", "<cmd>Lazy<cr>", desc = "Lazy plugin manager" },
-				{ "<leader>lb", "<cmd>lua require('fzf-lua').buffers()<cr>", desc = "Buffer" },
+				{ "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy plugin manager" },
+				{ "<leader>b", "<cmd>lua require('fzf-lua').buffers()<cr>", desc = "Buffer" },
 			})
 		end,
 	},
