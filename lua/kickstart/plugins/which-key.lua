@@ -21,24 +21,24 @@ return {
 			require("which-key").setup()
 
 			require("which-key").add({
-				{ "<leader>o", group = "Open" },
+				{ "<leader>e", group = "Edit" },
 				{
-					"<leader>o1",
+					"<leader>e1",
 					"<esc>:e ~/.config/nvim/lua/kickstart/plugins/which-key.lua<cr>",
 					desc = "Nvim config",
 				},
 				{
-					"<leader>o2",
+					"<leader>e2",
 					"<esc>:e ~/.config/wezterm/font.lua<cr>",
 					desc = "Wezterm config",
 				},
 				{
-					"<leader>o3",
+					"<leader>e3",
 					"<esc>:e ~/.config/i3/config<cr>",
 					desc = "i3wm config",
 				},
 				{
-					"<leader>o4",
+					"<leader>e4",
 					"<esc>:e ~/.emacs.d/init.el<cr>",
 					desc = "Emacs config",
 				},
@@ -48,25 +48,14 @@ return {
 					"<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>",
 					desc = "Format",
 				},
-				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
 				{ "<leader>f", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
-				{ "<leader>w", "<esc>:w<cr>", desc = "Write" },
+				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
 
-				{ "<leader>q", "<esc>:qa<cr>", desc = "Quit all" },
-				{ "<leader>e", "<cmd>HopChar1MW<cr>", desc = "Easymotion" },
+				{ "<leader>h", "<cmd>HopChar1MW<cr>", desc = "Hop" },
 				{ "<leader>s", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", desc = "Search" },
-
-				{ "<leader>d", "<cmd>diffthis<cr>", desc = "Diff this" },
-				{ "<leader>D", "<cmd>diffoff<cr>", desc = "Diff off" },
 
 				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight" },
 				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt" },
-
-				{ "<leader>t", "<cmd>TagbarToggle<cr>", desc = "Tagbar" },
-				{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
-
-				{ "<leader>l", "<cmd>Lazy<cr>", desc = "Lazy plugin manager" },
-				{ "<leader>b", "<cmd>lua require('fzf-lua').buffers()<cr>", desc = "Buffer" },
 			})
 		end,
 	},
