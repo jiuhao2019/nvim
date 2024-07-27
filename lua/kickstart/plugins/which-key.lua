@@ -21,41 +21,40 @@ return {
 			require("which-key").setup()
 
 			require("which-key").add({
-				{ "<leader>e", group = "Edit" },
+				{ "<leader>e", group = "Edit config" },
 				{
 					"<leader>e1",
 					"<esc>:e ~/.config/nvim/lua/kickstart/plugins/which-key.lua<cr>",
-					desc = "Nvim config",
+					desc = "Neovim",
 				},
 				{
 					"<leader>e2",
 					"<esc>:e ~/.config/wezterm/font.lua<cr>",
-					desc = "Wezterm config",
+					desc = "Wezterm",
 				},
 				{
 					"<leader>e3",
 					"<esc>:e ~/.config/i3/config<cr>",
-					desc = "i3wm config",
+					desc = "i3wm",
 				},
 				{
 					"<leader>e4",
 					"<esc>:e ~/.emacs.d/init.el<cr>",
-					desc = "Emacs config",
+					desc = "Emacs",
 				},
-
 				{
 					"<leader>F",
 					"<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>",
-					desc = "Format",
+					desc = "Format buffer",
 				},
-				{ "<leader>f", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files" },
-				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent" },
+				{ "<leader>f", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files pwd" },
+				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent files" },
 
-				{ "<leader>h", "<cmd>HopChar1MW<cr>", desc = "Hop" },
-				{ "<leader>s", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", desc = "Search" },
+				{ "<leader>h", "<cmd>HopChar1MW<cr>", desc = "Hop char" },
+				{ "<leader>s", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", desc = "Grep pwd" },
 
-				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Highlight" },
-				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Unhighlignt" },
+				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Color word" },
+				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Clear all color" },
 			})
 		end,
 	},

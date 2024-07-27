@@ -5,6 +5,6 @@ return {
 	},
 	{
 		"ibhagwan/fzf-lua",
-		opts = {},
+		opts = { winopts = { preview = { default = "" } } },
 	},
 }
