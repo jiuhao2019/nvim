@@ -75,7 +75,7 @@ vim.opt.timeoutlen = 30
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.background = "dark"
+vim.opt.background = "light"
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
