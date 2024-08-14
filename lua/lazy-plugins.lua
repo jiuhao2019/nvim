@@ -4,7 +4,7 @@ require("lazy").setup({
 
 	require("kickstart/plugins/which-key"),
 	require("kickstart/plugins/conform"),
-	require("kickstart.plugins.indent_line"),
+	-- require("kickstart.plugins.indent_line"),
 	require("kickstart.plugins.neo-tree"),
 	{ import = "custom.plugins" },
 	defaults = {

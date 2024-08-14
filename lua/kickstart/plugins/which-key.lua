@@ -44,8 +44,7 @@ return {
 				},
 				{
 					"<leader>F",
-					"<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>",
-					desc = "Format buffer",
+					"<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>", desc = "Format buffer",
 				},
 				{ "<leader>f", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files pwd" },
 				{ "<leader>r", "<cmd>lua require('fzf-lua').oldfiles()<cr>", desc = "Recent files" },
@@ -55,6 +54,12 @@ return {
 
 				{ "<leader>k", "<cmd>Interestingwords --toggle<cr>", desc = "Color word" },
 				{ "<leader>K", "<cmd>Interestingwords --remove_all<cr>", desc = "Clear all color" },
+
+				{ "<leader>U", "<cmd>UndotreeToggle<cr>", desc = "Undotree" },
+				{ "<leader>u", "<cmd>call UpdateCtags()<cr>", desc = "Update ctags" },
+
+				{ "<leader>t", "<cmd>Neotree<cr>", desc = "Neotree" },
+				{ "<leader>T", "<cmd>TagbarToggle()<cr>", desc = "Tagbar" },
 			})
 		end,
 	},
