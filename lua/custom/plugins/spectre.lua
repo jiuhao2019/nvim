@@ -111,7 +111,8 @@ return {
 					},
 					options = {
 						["ignore-case"] = {
-							value = "--ignore-case",
+							-- value = "--ignore-case",
+							value = "--case-sensitive",
 							icon = "[I]",
 							desc = "ignore case",
 						},
