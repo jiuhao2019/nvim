@@ -30,7 +30,7 @@ vim.cmd([[
     "一直显示底部状态栏,tab栏
     set laststatus =2
     set showtabline =0
-    set statusline=%F%m%r%h%w%=\ [%l\/%L:%v]
+    set statusline=%t%m%r%h%w%=\ [%l\/%L:%v]
     set tags=tags;
 
     function! UpdateCtags()
