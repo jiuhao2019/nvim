@@ -1,21 +1,3 @@
--- return {
--- 	{
--- 		{
--- 			"echasnovski/mini.surround",
--- 			opts = {
--- 				mappings = {
--- 					add = ";;",
--- 					delete = ";d",
--- 					find = ";f",
--- 					find_left = ";F",
--- 					highlight = ";h",
--- 					replace = ";r",
--- 					update_n_lines = ";n",
--- 				},
--- 			},
--- 		},
--- 	},
--- }
 return {
 	"kylechui/nvim-surround",
 	version = "*", -- Use for stability; omit to use `main` branch for the latest features
