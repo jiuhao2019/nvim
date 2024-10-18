@@ -1,5 +1,5 @@
 require("lazy").setup({
-        import = "plugins" ,
+	import = "plugins",
 	defaults = {
 		lazy = false,
 		-- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
@@ -13,9 +13,6 @@ require("lazy").setup({
 			-- disable some rtp plugins
 			disabled_plugins = {
 				"gzip",
-				"matchit",
-				"matchparen",
-				"netrwPlugin",
 				"tarPlugin",
 				"tohtml",
 				"tutor",

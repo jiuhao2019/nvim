@@ -18,15 +18,10 @@ vim.keymap.set("n", "<A-2>", ":e ~/.config/wezterm/font.lua<cr>")
 vim.keymap.set("n", "<A-3>", ":e ~/.config/i3/config<cr>")
 vim.keymap.set("n", "<A-4>", ":e ~/.emacs.d/init.el<cr>")
 
-vim.keymap.set("n", "<A-F>", "<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>")
-vim.keymap.set("n", "<A-f>", "<cmd>lua require('fzf-lua').files()<cr>")
-vim.keymap.set("n", "<A-r>", "<cmd>lua require('fzf-lua').oldfiles()<cr>")
-vim.keymap.set("n", "<A-e>", "<cmd>HopChar1MW<cr>")
+vim.keymap.set("n", "<A-e>", "<cmd>Explore<cr>")
+vim.keymap.set("n", "<A-f>", "<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>")
 vim.keymap.set("n", "<A-s>", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", { desc = "search" })
 vim.keymap.set("n", "<A-u>", "<cmd>UndotreeToggle<cr>")
-vim.keymap.set("n", "<A-c>", "<cmd>call UpdateCtags()<cr>")
-vim.keymap.set("n", "<A-n>", "<cmd>Neotree reveal<cr>")
-vim.keymap.set("n", "<A-i>", "<cmd>TagbarToggle()<cr>")
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
