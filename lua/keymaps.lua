@@ -27,7 +27,7 @@ vim.keymap.set("n", "<A-u>", "<cmd>UndotreeToggle<cr>")
 vim.keymap.set("n", "<A-c>", "<cmd>call UpdateCtags()<cr>")
 vim.keymap.set("n", "<A-n>", "<cmd>Neotree reveal<cr>")
 vim.keymap.set("n", "<A-i>", "<cmd>TagbarToggle()<cr>")
-
+  
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
