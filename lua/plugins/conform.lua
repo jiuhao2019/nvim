@@ -1,4 +1,4 @@
-return {
+return { 
 	"stevearc/conform.nvim", -- Autoformat
 	lazy = false,
 	opts = {
@@ -18,6 +18,6 @@ return {
 			["typescript"] = { "prettier" },
 			["markdown"] = { "prettier" },
 			["c"] = { "astyle" },
-		},
+		}, 
 	},
 }
