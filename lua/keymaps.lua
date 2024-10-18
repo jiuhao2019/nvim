@@ -22,14 +22,7 @@ vim.keymap.set("n", "<A-e>", "<cmd>Explore<cr>")
 vim.keymap.set("n", "<A-f>", "<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<cr>")
 vim.keymap.set("n", "<A-s>", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", { desc = "search" })
 vim.keymap.set("n", "<A-u>", "<cmd>UndotreeToggle<cr>")
-<<<<<<< HEAD
 
-=======
-vim.keymap.set("n", "<A-c>", "<cmd>call UpdateCtags()<cr>")
-vim.keymap.set("n", "<A-n>", "<cmd>Neotree reveal<cr>")
-vim.keymap.set("n", "<A-i>", "<cmd>TagbarToggle()<cr>")
-  
->>>>>>> cb9073733165935e4ab0bd3fd4e98ca7f568c49c
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
